@@ -17,6 +17,7 @@ node_modules/
 
 .vscode
 
-buttons/
+Button.js
+DocButtons.js
 referencebase.html
 referenceindex.html
