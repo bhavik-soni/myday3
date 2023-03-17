@@ -1,0 +1,22 @@
+# Ignore python virtual environments
+.venv/
+venv/
+
+# Ignore python cache files
+__pycache__/
+
+# Ignore node files
+node_modules/
+
+# IDE files
+.idea/
+
+# Ignore the project environment file, which could contain secrets keys and other configuration parameters.
+.env
+
+
+.vscode
+
+buttons/
+referencebase.html
+referenceindex.html
