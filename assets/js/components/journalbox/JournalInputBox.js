@@ -223,17 +223,11 @@ export default function JournalInputBox() {
             placeholder="Write your thoughts..."
             required
           ></textarea>
-          <div class="absolute bottom-2.5 right-10">
+          <div class="absolute bottom-2.5 left-3">
             <SaveIndicator />
           </div>
         </div>
       </div>
-      <button
-        type="submit"
-        class="inline-flex items-center px-5 py-2.5 mt-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
-      >
-        Submit
-      </button>
     </form>
   );
 }
