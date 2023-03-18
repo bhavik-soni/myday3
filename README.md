@@ -22,6 +22,12 @@ $ ./bootstrap.sh
 ```bash
 $ yarn dev
 ```
+### If using vscode (maybe other ides too?)
+- Find and (copy) the python interpreter path with:
+```bash
+poetry run python -c "import sys; print(sys.executable)"
+```
+- Open command palette -> Select Interpreter -> Enter Intepreter Path -> (Paste)
 
 
 ## Caveats
