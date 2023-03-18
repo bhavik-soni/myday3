@@ -1,4 +1,5 @@
 import React from "react";
+import SaveIndicator from "../saveindicator/SaveIndicator";
 
 export default function JournalInputBox() {
   return (
@@ -223,7 +224,7 @@ export default function JournalInputBox() {
             required
           ></textarea>
           <div class="absolute bottom-2.5 right-10">
-            <span class="text-sm  text-gray-400 block">All changes saved</span>
+            <SaveIndicator />
           </div>
         </div>
       </div>
