@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background-color: rgba(255, 87, 51, 0.5);
-  color: #fff;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
