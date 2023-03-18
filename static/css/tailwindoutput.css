@@ -320,11 +320,20 @@ video {
 .bottom-0 {
   bottom: 0;
 }
+.bottom-2 {
+  bottom: 0.5rem;
+}
+.bottom-2\.5 {
+  bottom: 0.625rem;
+}
 .left-0 {
   left: 0;
 }
 .right-0 {
   right: 0;
+}
+.right-10 {
+  right: 2.5rem;
 }
 .z-10 {
   z-index: 10;
@@ -779,13 +788,13 @@ video {
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-::-moz-selection {
-  background-color: #ff573380;
-  color: #fff;
+html {
+  box-sizing: border-box;
 }
-::selection {
-  background-color: #ff573380;
-  color: #fff;
+*,
+:after,
+:before {
+  box-sizing: inherit;
 }
 .selection\:bg-fuchsia-300 ::-moz-selection {
   --tw-bg-opacity: 1;
