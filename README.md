@@ -17,6 +17,9 @@ $ yarn install
 
 ```
 ```bash
+$ ./bootstrap.sh
+```
+```bash
 $ yarn dev
 ```
 
