@@ -1,12 +1,12 @@
 {
-  "name": "django_react_tailwindcss",
-  "version": "0.1.0",
+  "name": "myday3",
+  "version": "6.9",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install && yarn build:dev:tailwindcss && poetry install",
+    "prepare": "husky install && poetry install",
     "build:dev:tailwindcss": "tailwind build ./assets/css/tailwind.css -o ./static/css/tailwind.css && cleancss -o ./static/css/tailwind.min.css ./static/css/tailwind.css",
-    "dev": "yarn dev:django & yarn dev:webpack & yarn dev:browser-sync & yarn dev:tailwindcss",
-    "dev:tailwindcss": "tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwindoutput.css",
+    "dev": "yarn dev:django & yarn dev:webpack & yarn dev:tailwindcss",
+    "dev:tailwindcss": "tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwindoutput.css --watch",
     "dev:django": "poetry run python manage.py runserver 0.0.0.0:8000",
     "dev:webpack": "webpack --watch --mode development",
     "dev:browser-sync": "browser-sync start",
@@ -44,6 +44,7 @@
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "style-loader": "^3.3.2"
   }
 }
