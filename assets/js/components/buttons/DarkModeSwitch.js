@@ -21,9 +21,9 @@ const DarkModeSwitch = () => {
         Toggle {isDarkMode ? "light" : "dark"} mode
       </span>
       {isDarkMode ? (
-        <IoMoonOutline className="h-6 w-6" aria-hidden="true" />
-      ) : (
         <FiSun className="h-6 w-6" aria-hidden="true" />
+      ) : (
+        <IoMoonOutline className="h-6 w-6" aria-hidden="true" />
       )}
     </button>
   );
