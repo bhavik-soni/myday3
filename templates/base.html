@@ -1,35 +1,33 @@
-{% load static %}
+{% load static %} {% block head %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static '/css/tailwindoutput.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-{% block head %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <link rel="stylesheet" href="{% static '/css/tailwindoutput.css' %}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-        <link rel="stylesheet" href="{% static '/css/fonts.css' %}" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-        rel="stylesheet"
-        type="text/css"
-        />
-
-        <title>{% block title %}{% endblock %}</title>
-    </head>
-{% endblock %}
-<body>
-    {% block navbar %}{% endblock %}
-
-    {% block content %}{% endblock %}
-
-    {% block footer %}{% endblock %}
-
-    {% block scripts %}
-    <script id="__bs_script__">//<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
-    //]]></script>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  {% endblock %}
+  <body>
+    {% block navbar %}{% endblock %} {% block content %}{% endblock %} {% block
+    footer %}{% endblock %} {% block scripts %}
+    <script id="__bs_script__">
+      //<![CDATA[
+      document.write(
+        "<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace(
+          "HOST",
+          location.hostname
+        )
+      );
+      //]]>
+    </script>
     {% endblock %}
-</body>
-
+  </body>
 </html>
