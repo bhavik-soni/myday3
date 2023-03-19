@@ -1,5 +1,6 @@
 import React from "react";
 import SaveIndicator from "../saveindicator/SaveIndicator";
+import InputArea from "./InputArea";
 
 export default function JournalInputBox() {
   return (
@@ -214,13 +215,8 @@ export default function JournalInputBox() {
           <label for="editor" class="sr-only">
             Publish post
           </label>
-          <textarea
-            id="input"
-            rows="8"
-            class="relative w-full px-0 text-md text-gray-800 bg-white border-0 dark:bg-gray-800 focus:outline-none dark:text-white dark:placeholder-gray-400"
-            placeholder="Write your thoughts..."
-            required
-          ></textarea>
+          <InputArea />
+
           <div class="absolute bottom-2.5 left-3">
             <SaveIndicator />
           </div>
