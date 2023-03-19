@@ -185,8 +185,7 @@ export default function JournalInputBox() {
           </div>
           <button
             type="button"
-            data-tooltip-target="tooltip-fullscreen"
-            class="p-2 text-gray-500 rounded cursor-pointer sm:ml-auto hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+            class="items-bottom group relative flex cursor-pointer justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white sm:ml-auto"
           >
             <svg
               aria-hidden="true"
@@ -202,15 +201,14 @@ export default function JournalInputBox() {
               ></path>
             </svg>
             <span class="sr-only">Full screen</span>
+            <div
+              role="tooltip"
+              class="invisible absolute z-10 mt-8 mr-11 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 hover:visible group-hover:visible group-hover:opacity-100 dark:bg-gray-700"
+            >
+              Show full screen
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
           </button>
-          <div
-            id="tooltip-fullscreen"
-            role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Show full screen
-            <div class="tooltip-arrow" data-popper-arrow></div>
-          </div>
         </div>
         <div class="relative px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800 selection:bg-fuchsia-300 selection:text-fuchsia-900">
           <label for="editor" class="sr-only">
