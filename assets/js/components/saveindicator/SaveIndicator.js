@@ -23,16 +23,8 @@ export default function SaveIndicator({ saveStatus }) {
 
   return (
     <div class="items-center inline-flex">
-      <span class="text-sm select-none text-gray-400">All changes saved</span>
-      <div
-        className={`ml-2 w-3 h-3 rounded-full ${
-          color === "green"
-            ? "bg-green-500"
-            : color === "yellow"
-            ? "bg-yellow-500"
-            : "bg-red-500"
-        }`}
-      ></div>
+      <span class="text-sm select-none text-gray-400">{status}</span>
+      <CircleIndicator />
     </div>
   );
 }
