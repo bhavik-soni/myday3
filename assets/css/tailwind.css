@@ -12,6 +12,6 @@ html {
   box-sizing: inherit;
 }
 
-body * {
+body * :not(#no-color-transition) {
   @apply transition-colors duration-200;
 }
