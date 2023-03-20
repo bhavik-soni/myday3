@@ -24,7 +24,7 @@ export default function SaveIndicator({ saveStatus }) {
   return (
     <div class="items-center inline-flex">
       <span class="text-sm select-none text-gray-400">{status}</span>
-      <CircleIndicator />
+      <CircleIndicator color={color} />
     </div>
   );
 }
