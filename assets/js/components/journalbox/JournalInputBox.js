@@ -1,5 +1,4 @@
 import React from "react";
-import SaveIndicator from "../saveindicator/SaveIndicator";
 import InputArea from "./InputArea";
 
 export default function JournalInputBox() {
@@ -216,10 +215,6 @@ export default function JournalInputBox() {
             Publish post
           </label>
           <InputArea />
-
-          <div class="absolute bottom-2.5 left-3">
-            <SaveIndicator />
-          </div>
         </div>
       </div>
     </form>
