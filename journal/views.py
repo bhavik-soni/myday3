@@ -6,7 +6,14 @@ from .models import Entry
 from django.contrib.auth import get_user_model
 import json
 
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
 user = get_user_model()
+
+model_path = 'journal/emotion-classification'
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+emo_class_model = AutoModelForSequenceClassification.from_pretrained(model_path)
 
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = 'journal/index.html'
@@ -43,10 +50,36 @@ def entry_view(request, entry_id=None, author_id=None):
                 entry.content = new_entry_content
                 entry.save()
             else:
-                entry = Entry.objects.create(author=author, content="")
+                entry = Entry.objects.create(author=author, content=new_entry_content)
+                entry.created_at = today
+                entry.save()
 
-            return JsonResponse({'id': entry.id, 'author': entry.author.id, 'content': entry.content, 'created_at': entry.created_at, 'updated_at': entry.updated_at}, status=200)
+            return JsonResponse({
+                'id': entry.id, 
+                'author': entry.author.id, 
+                'content': entry.content, 
+                'created_at': entry.created_at, 
+                'updated_at': entry.updated_at
+            }, status=200)
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON in request body'}, status=400)
         except KeyError:
             return JsonResponse({'error': 'Missing required fields in request body'}, status=400)
+        
+def emotion_classification_view(request):
+    text = json.loads(request.body).get('content')
+    input = tokenizer(text, return_tensors='pt')
+
+    with torch.no_grad():
+        logits = emo_class_model(**input).logits
+    
+    id2label = {
+        0: 'sadness',
+        1: 'joy',
+        2: 'love',
+        3: 'anger',
+        4: 'fear',
+        5: 'surprise',
+    }
+
+    return JsonResponse({id2label[i]: float(logits[0][i]) for i in range(6)})
