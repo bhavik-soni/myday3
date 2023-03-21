@@ -3,10 +3,9 @@ import SaveIndicator from "../saveindicator/SaveIndicator";
 import { debounce } from "lodash";
 import axios from "axios";
 
-export default function InputArea() {
+export default function InputArea({ inputContent, setInputContent }) {
   const authorId = 2; // should come from django auth
   const [saveStatus, setSaveStatus] = useState("saved");
-  const [inputContent, setInputContent] = useState("");
 
   // Retrieve the input content from the database when the component mounts
   useEffect(() => {
