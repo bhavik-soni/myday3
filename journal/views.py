@@ -8,9 +8,10 @@ import json
 
 user = get_user_model()
 
+
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = 'journal/index.html'
-    login_url = "login"
+    login_url = "accounts:login"
 
     def get_context_data(self):
         return
