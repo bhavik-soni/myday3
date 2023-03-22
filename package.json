@@ -9,9 +9,7 @@
     "dev:tailwindcss": "tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwindoutput.css --watch",
     "dev:django": "poetry run python manage.py runserver 0.0.0.0:8000",
     "dev:webpack": "webpack --watch --mode development",
-    "dev:browser-sync": "browser-sync start",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "dev:browser-sync": "browser-sync start"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,html,scss,md,mdx}": [
@@ -22,10 +20,6 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "@storybook/addon-actions": "^6.1.17",
-    "@storybook/addon-essentials": "^6.1.17",
-    "@storybook/addon-links": "^6.1.17",
-    "@storybook/react": "^6.1.17",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.14",
