@@ -15,9 +15,10 @@ model_path = 'journal/emotion-classification'
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 emo_class_model = AutoModelForSequenceClassification.from_pretrained(model_path)
 
+
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = 'journal/index.html'
-    login_url = "login"
+    login_url = "accounts:login"
 
     def get_context_data(self):
         return
