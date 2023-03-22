@@ -1,13 +1,1 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
-
-  <noscript>This site requires Java Script enabled</noscript>
-  <div id="root">
-    
-  </div>
-
-  <script src="{% static '/js/bundles/home-bundle.js' %}"></script>
-
-{% endblock %}
+<a href="{% url 'journal:index' %}">welcome Home!></a>
