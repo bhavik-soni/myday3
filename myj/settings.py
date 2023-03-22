@@ -145,8 +145,8 @@ SECRET_KEY = os.environ['DEV_SECRET_KEY']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # from https://learndjango.com/tutorials/django-login-and-logout-tutorial
-LOGIN_REDIRECT_URL = reverse_lazy("journal:journal-index")
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = reverse_lazy("journal:index")
+LOGOUT_REDIRECT_URL = reverse_lazy("accounts:login")
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"

@@ -35,13 +35,13 @@ export default function NavBar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="block h-8 w-auto select-none lg:hidden"
+                    src="https://cdn.discordapp.com/emojis/1028177603225452615.webp?size=240&quality=lossless"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="hidden h-8 w-auto select-none lg:block"
+                    src="https://cdn.discordapp.com/emojis/1028177603225452615.webp?size=240&quality=lossless"
                     alt="Your Company"
                   />
                 </div>
@@ -127,7 +127,7 @@ export default function NavBar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/accounts/logout"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"

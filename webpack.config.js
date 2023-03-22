@@ -3,8 +3,8 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    // components: glob.sync("./assets/components/**/*.js"),
     home: glob.sync("./assets/js/pages/home.js"),
+    login: glob.sync("./assets/js/pages/login.js"),
   }, // path to input files
   output: {
     filename: "[name]-bundle.js", // output bundle file name
