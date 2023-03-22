@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import DarkModeSwitch from "../buttons/DarkModeSwitch";
 
 const navigation = [
-  { name: "Journal", href: "#", current: true },
+  { name: "Journal", href: "/journal", current: true },
   { name: "Dashboard", href: "#", current: false },
   { name: "About", href: "#", current: false },
   { name: "Contact Us", href: "#", current: false },
