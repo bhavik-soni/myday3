@@ -28,11 +28,11 @@ export default function JournalInputBox() {
   }
 
   return (
-    <form class="m-4">
-      <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-        <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-          <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
-            <div class="flex items-center space-x-1 sm:pr-4">
+    <form className="m-4">
+      <div className="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+        <div className="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
+          <div className="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
+            <div className="flex items-center space-x-1 sm:pr-4">
               <TopRowSvgButton
                 svgPath="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
                 hoverText="Attach file"
@@ -54,7 +54,7 @@ export default function JournalInputBox() {
                 hoverText="Add emoji"
               />
             </div>
-            <div class="flex flex-wrap items-center space-x-1 sm:pl-4">
+            <div className="flex flex-wrap items-center space-x-1 sm:pl-4">
               <TopRowSvgButton
                 svgPath="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                 hoverText="Add list"
@@ -72,7 +72,7 @@ export default function JournalInputBox() {
                 hoverText="Download"
               />
             </div>
-            <div class="flex items-center ml-3 space-x-1 sm:pr-4">
+            <div className="flex items-center ml-3 space-x-1 sm:pr-4">
               <EmotionClassifier
                 onClick={() => handleEmotionClassifierClick(inputContent)}
               />
@@ -80,33 +80,33 @@ export default function JournalInputBox() {
           </div>
           <button
             type="button"
-            class="items-bottom group relative flex cursor-pointer justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white sm:ml-auto"
+            className="items-bottom group relative flex cursor-pointer justify-center rounded p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white sm:ml-auto"
           >
             <svg
               aria-hidden="true"
-              class="w-5 h-5"
+              className="w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
-            <span class="sr-only">Full screen</span>
+            <span className="sr-only">Full screen</span>
             <div
               role="tooltip"
-              class="invisible absolute z-10 mt-8 mr-11 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 hover:visible group-hover:visible group-hover:opacity-100 dark:bg-gray-700"
+              className="invisible absolute z-10 mt-8 mr-11 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 hover:visible group-hover:visible group-hover:opacity-100 dark:bg-gray-700"
             >
               Show full screen
-              <div class="tooltip-arrow" data-popper-arrow></div>
+              <div className="tooltip-arrow" data-popper-arrow></div>
             </div>
           </button>
         </div>
-        <div class="relative px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800 selection:bg-fuchsia-300 selection:text-fuchsia-900">
-          <label for="editor" class="sr-only">
+        <div className="relative px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800 selection:bg-fuchsia-300 selection:text-fuchsia-900">
+          <label htmlFor="editor" className="sr-only">
             Publish post
           </label>
           <InputArea
