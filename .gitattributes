@@ -1,0 +1,2 @@
+*.bin filter=lfs diff=lfs merge=lfs -text
+/journal/emotion-classification/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text

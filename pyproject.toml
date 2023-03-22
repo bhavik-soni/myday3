@@ -6,9 +6,11 @@ authors = ["Bhavik Soni"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 Django = "^3.2"
 python-dotenv = "^0.17.0"
+transformers = "^4.27.2"
+torch = "^2.0.0"
 email-validator = "^1.3.1"
 
 [tool.poetry.dev-dependencies]
