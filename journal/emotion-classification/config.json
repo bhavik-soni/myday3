@@ -34,6 +34,6 @@
   "sinusoidal_pos_embds": false,
   "tie_weights_": true,
   "torch_dtype": "float32",
-  "transformers_version": "4.27.1",
+  "transformers_version": "4.27.2",
   "vocab_size": 30522
 }
