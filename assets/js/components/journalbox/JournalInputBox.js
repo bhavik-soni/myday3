@@ -42,7 +42,7 @@ export default function JournalInputBox() {
         <>
           <div
             className="absolute top-0 right-0 bottom-0 left-0
-                        z-10 bg-slate-400 opacity-25"
+                        z-10 bg-white opacity-25"
           ></div>
           <div
             className="absolute top-0 right-0 bottom-0 left-0
