@@ -37,7 +37,6 @@ export default function InputArea({ inputContent, setInputContent }) {
     intervalRef.current = setTimeout(() => {
       debouncedSaveInputContent.cancel(); // cancel the debounce function to prevent it from executing
       debouncedSaveInputContent(newInputContent); // execute the save function immediately
-      setSaveStatus("saved"); // set status to 'saved' after executing the save function
     }, 1300);
   };
 
@@ -55,6 +54,7 @@ export default function InputArea({ inputContent, setInputContent }) {
       )
       .then((response) => {
         console.log(response.data);
+        setSaveStatus("saved"); // set status to 'saved' if the API call succeeds
       })
       .catch((error) => {
         console.error(error);
