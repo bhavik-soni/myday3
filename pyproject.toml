@@ -2,7 +2,7 @@
 name = "myday3"
 version = "0.0.0"
 description = ""
-authors = ["Bhavik Soni"]
+authors = ["Bhavik Soni", "Ray Chen"]
 license = "MIT"
 
 [tool.poetry.dependencies]
