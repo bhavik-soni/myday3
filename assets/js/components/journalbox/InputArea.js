@@ -1,11 +1,15 @@
-import { React, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import SaveIndicator from "../saveindicator/SaveIndicator";
+import useAutosizeTextArea from "../../util/useAutosizeTextArea";
 import { debounce } from "lodash";
 import axios from "axios";
 
 export default function InputArea({ inputContent, setInputContent }) {
   const authorId = 2; // should come from django auth
   const [saveStatus, setSaveStatus] = useState("saved");
+  const textAreaRef = useRef(null);
+
+  useAutosizeTextArea(textAreaRef.current, inputContent);
 
   // Retrieve the input content from the database when the component mounts
   useEffect(() => {
@@ -13,7 +17,7 @@ export default function InputArea({ inputContent, setInputContent }) {
       .get(`/journal/api/entry/author/${authorId}`)
       .then((response) => {
         console.log(`This is from the DB: ${JSON.stringify(response.data)}`);
-        setInputContent(response.data.entries[0].content);
+        setInputContent(response.data.entries[0].content); // is this null when first entry for the day?
       })
       .catch((error) => {
         console.error(error);
@@ -69,6 +73,7 @@ export default function InputArea({ inputContent, setInputContent }) {
         value={inputContent}
         rows="8"
         onChange={handleInputContentChange}
+        ref={textAreaRef}
         className="relative w-full px-0 text-md text-gray-800 bg-white border-0 dark:bg-gray-800 focus:outline-none dark:text-white dark:placeholder-gray-400"
         placeholder="Write your thoughts..."
         required
