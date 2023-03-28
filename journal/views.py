@@ -75,12 +75,12 @@ def emotion_classification_view(request):
         logits = emo_class_model(**input).logits
     
     id2label = {
-        0: 'sadness',
-        1: 'joy',
-        2: 'love',
-        3: 'anger',
-        4: 'fear',
-        5: 'surprise',
+        0: '😢', # 'sadness',
+        1: '😄', # 'joy',
+        2: '❤️', # 'love',
+        3: '😡', # 'anger',
+        4: '😨', # 'fear',
+        5: '😲', # 'surprise',
     }
 
     return JsonResponse({id2label[i]: float(logits[0][i]) for i in range(6)})
