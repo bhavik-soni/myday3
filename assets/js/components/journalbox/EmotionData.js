@@ -18,7 +18,8 @@ export default function EmotionData({ data, onExit }) {
   const emotionScoreElements = [];
   for (let i = 0; i < Object.keys(data).length; i++) {
     const key = Object.keys(data)[i];
-    const colorParam = emotionScores[i];
+    // 7 seems close to max; might want to change later thos
+    const colorParam = (emotionScores[i] * Math.log(softmaxDenom)) / 7;
     emotionScoreElements.push(
       <div
         key={key}
