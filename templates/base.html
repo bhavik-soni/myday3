@@ -18,6 +18,15 @@
   <body>
     {% block navbar %}{% endblock %} {% block content %}{% endblock %} {% block
     footer %}{% endblock %} {% block scripts %}
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.keyCode == 83) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
+
     <!-- <script id="__bs_script__">
       //<![CDATA[
       document.write(
