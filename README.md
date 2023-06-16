@@ -1,7 +1,5 @@
 # MyDay - Attempt 3
 
-It's gonna work this time. Believe me.
-
 ## Requirements
 
 - Yarn or NPM package managers
